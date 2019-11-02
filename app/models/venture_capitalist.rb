@@ -23,7 +23,7 @@ class VentureCapitalist
     end
 
     def funding_rounds
-        FundingRound.all.select{|fr| fr.venture_capitalist == self}
+        FundingRound.all.select{|fr| fr.venture_capitalist == self}.uniq
     end
 
     def portfolio
